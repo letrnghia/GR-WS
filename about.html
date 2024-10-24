@@ -1,90 +1,137 @@
-<!-- Header -->
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website IT - ABOUT US</title>
-  <link rel="stylesheet" href="about.css">
-</head>
-<body>
-<header class="main-header">  
-    <div class="logo">
-      <img src="images/Ảnh chụp màn hình 2024-10-24 001419.png" width="180px" height="100px" alt="Logo IT Company"> 
-    </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="#">SERVICES</a></li>
-        <li><a href="about.html">ABOUT US</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
-    </nav>
-    <div class="contact-info">
-      <p>Hotline: 1900 123 456</p>
-      <p>Email: Ourwebsite07@itcompany.com</p>
-    </div>
-</header>
+import React from 'react';
 
-<!-- Meet The Team Section -->
-<section class="meet-team">
-    <h3>Meet The Team</h3>
-    <h2>My Hard-working Team</h2>
+const TeamLayout = () => {
+  const teamMembers = [
+    {
+      name: 'Jane Doe',
+      role: 'CEO & Founder',
+      description: 'Phasellus eget enim eu lectus faucibus vestibulum.',
+      email: 'example1@example.com',
+      image: '/api/placeholder/160/160',
+      contactUrl: 'https://www.facebook.com/janedoe'
+    },
+    {
+      name: 'Mike Ross',
+      role: 'Art Director',
+      description: 'Phasellus eget enim eu lectus faucibus vestibulum.',
+      email: 'example2@example.com',
+      image: '/api/placeholder/160/160',
+      contactUrl: 'https://www.facebook.com/mikeross'
+    },
+    {
+      name: 'John Doe',
+      role: 'Designer',
+      description: 'Phasellus eget enim eu lectus faucibus vestibulum.',
+      email: 'example3@example.com',
+      image: '/api/placeholder/160/160',
+      contactUrl: 'https://www.facebook.com/johndoe'
+    },
+    {
+      name: 'Emily Clark',
+      role: 'Marketing Specialist',
+      description: 'Phasellus eget enim eu lectus faucibus vestibulum.',
+      email: 'example4@example.com',
+      image: '/api/placeholder/160/160',
+      contactUrl: 'https://www.facebook.com/emilyclark'
+    },
+    {
+      name: 'Daniel Smith',
+      role: 'Lead Developer',
+      description: 'Phasellus eget enim eu lectus faucibus vestibulum.',
+      email: 'example5@example.com',
+      image: '/api/placeholder/160/160',
+      contactUrl: 'https://www.facebook.com/danielsmith'
+    }
+  ];
 
-    <div class="team-grid">
-        <div class="team-member">
-            <img src="Ảnh chụp màn hình 2024-10-23 220058.img" alt="Lương Hoài Sang">
-            <h4>Lương Hoài Sang</h4>
-            <p> </p>
-            <p>MSSV: 23130270</p>
-            <p>Lead Developer</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum.</p>
-            <p><a href="link page">GIFHUB Link</a></p>
-            <a href="https://www.facebook.com/janedoe" class="contact-btn" target="_blank">Contact</a>
-             <p>Mail: 23130270@st.hcmuaf.edu.vn</p>
+  return (
+    <div className="min-h-screen bg-[#f5f5dc]">
+      {/* Header */}
+      <header className="bg-[#2e7d32] text-white shadow-md">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-5">
+            <div className="flex items-center">
+              <img
+                src="/api/placeholder/180/100"
+                alt="Logo IT Company"
+                className="h-[100px] w-[180px] object-contain transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+
+            <nav className="hidden md:block">
+              <ul className="flex space-x-8">
+                <li>
+                  <a href="index.html" className="text-white font-semibold hover:text-gray-200 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full">
+                    Trang chủ
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-white font-semibold hover:text-gray-200 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full">
+                    Dịch vụ
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html" className="text-white font-semibold hover:text-gray-200 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full">
+                    Về chúng tôi
+                  </a>
+                </li>
+                <li>
+                  <a href="contact.html" className="text-white font-semibold hover:text-gray-200 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full">
+                    Liên hệ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div className="text-sm opacity-90">
+              <p className="mb-1">Hotline: 1900 123 456</p>
+              <p>Email: Ourwebsite07@itcompany.com</p>
+            </div>
+          </div>
         </div>
-        <div class="team-member">
-            <img src="member2.jpg" alt="Huỳnh Thị Ngọc Trân">
-            <h4>Huỳnh Thị Ngọc Trân</h4>
-            <p>MSSV: 23130342</p>
-            <p>Art Director</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum.</p>
-            <p><a href="link page">GIFHUB Link</a></p>
-            <a href="https://www.facebook.com/profile.php?id=100077704383279&mibextid=LQQJ4d" class="contact-btn" target="_blank">Contact</a>
-            <p>Mail: 23130342st.hcmuaf.edu.vn</p>
+      </header>
+
+      {/* Meet The Team Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold text-[#2e7d32] mb-3 tracking-tight">Meet The Team</h3>
+            <h2 className="text-2xl text-[#2e7d32] font-semibold opacity-90">My Hard-working Team</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {teamMembers.map((member, index) => (
+              <div 
+                key={index} 
+                className="bg-white rounded-2xl shadow-lg p-8 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border border-[#2e7d32]/10 flex flex-col"
+              >
+                <div className="flex-1">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-40 h-40 rounded-full mx-auto mb-6 object-cover border-4 border-[#2e7d32]/10 transition-all duration-300 hover:border-[#2e7d32]/30"
+                  />
+                  <h4 className="text-xl font-semibold text-[#2e7d32] mb-3">{member.name}</h4>
+                  <p className="text-gray-600 font-medium mb-3">{member.role}</p>
+                  <p className="text-gray-500 mb-4">{member.description}</p>
+                  <p className="text-gray-600 mb-6">{member.email}</p>
+                </div>
+                
+                <a
+                  href={member.contactUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-[#2e7d32] text-white text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:bg-[#1e5821] hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  Contact
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
-        <div class="team-member">
-            <img src="member3.jpg" alt="Bùi Hà Duy Phong">
-            <h4>Bùi Hà Duy Phong</h4>
-            <p> </p>
-            <p>MSSV: 23130235</p>
-            <p>Designer</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum.</p>
-            <p><a href="https://trantri555.github.io/Web/">GIFHUB Link</a></p>
-            <a href="https://www.facebook.com/duyphong.bui.3348" class="contact-btn" target="_blank">Contact</a>
-            <p>Mail: 23130235@st.hcmuaf.edu.vn</p>
-        </div>
-        <div class="team-member">
-            <img src="member4.jpg" alt="Trấn Đức Trí">
-            <h4>Trấn Đức Trí</h4>
-            <p> </p>
-            <p>MSSV: 23130347</p>
-            <p>Marketing Specialist</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum.</p>
-            <p><a href="link page">GIFHUB Link</a></p>
-            <a href="https://www.facebook.com/emilyclark" class="contact-btn" target="_blank">Contact</a>
-            <p>Mail:  23130347@st.hcmuaf.edu.vn</p>
-        </div>
-        <div class="team-member">
-            <img src="member5.jpg" alt="Lê Trọng Nghĩa">
-            <h4>Lê Trọng Nghĩa</h4>
-            <p> </p>
-            <p>MSSV: 23130209</p>
-            <p>CEO & Founder</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum.</p>
-            <p><a href="https://letrnghia.github.io/WS/">GIFHUB Link</a></p>
-            <a href="https://www.facebook.com/pi.1309?mibextid=ZbWKwL" class="contact-btn" target="_blank">Contact</a>
-            <p>Mail: 23130209@st.hcmuaf.edu.vn</p>
-        </div>
+      </section>
     </div>
-</section>
+  );
+};
+
+export default TeamLayout;
